@@ -63,8 +63,7 @@ public class slag_program {
 							condition_feature = false;
 						}
 					}
-				
-				break;
+					break;
 				
 				case "2":
 				
@@ -92,7 +91,7 @@ public class slag_program {
 							condition_feature = false;
 						}
 					}
-				break;
+					break;
 				
 				case "3"://Show history
 					System.out.println("------------------Show history-------------------------------");
@@ -125,7 +124,6 @@ public class slag_program {
 						}
 						ulti.WriteFileData(data);
 					}
-				
 					break;
 				case "5"://Edit Slang-word
 					System.out.println("------------------Edit a Slang-Word--------------------------");
@@ -140,8 +138,7 @@ public class slag_program {
 						}
 						ulti.WriteFileData(data);
 					}
-				
-				break;
+					break;
 				
 				case "6"://delete slang
 					System.out.println("------------------Delete a Slang-Word-------------------------------");
@@ -154,8 +151,7 @@ public class slag_program {
 						}
 						ulti.WriteFileData(data);
 					}
-					
-				break;
+					break;
 				case "7"://reset data
 					System.out.println("------------------Reset all data------------------------------");
 					while(condition_feature) {
@@ -169,8 +165,7 @@ public class slag_program {
 						}
 						ulti.WriteFileData(data);
 					}
-				
-				break;
+					break;
 				case "8"://random 1 slang-word
 					System.out.println("------------------Random a Slang-Word------------------------------");
 					while(condition_feature) {
@@ -189,8 +184,7 @@ public class slag_program {
 							condition_feature = false;
 						}
 					}
-				
-				break;
+					break;
 				case "9":
 					System.out.println("------------------Funny Question: Show a random Slang-word ------------------------------");
 					while(condition_feature) {
@@ -202,9 +196,7 @@ public class slag_program {
 							condition_feature = false;
 						}
 					}	
-				
 					break;
-					
 				case "10":
 					System.out.println("------------------Funny Question: Show a random Definition-------------------------------");
 					while(condition_feature) {
@@ -216,16 +208,14 @@ public class slag_program {
 							condition_feature = false;
 						}
 					}
-				break;
-				
+					break;
 				case "11"://exit
 					condition = false;
 					ulti.WriteFileData(data);
-				break;
-				
+					break;
 				default:
 					System.out.println("Wrong Input!!!");
-				break;
+					break;
 		}
 		
 	
