@@ -5,7 +5,6 @@ import java.util.*;
 
 
 public class ulti {
-	
 	//Read file data
 	public static HashMap<String, String> ReadFileData(String fileName) {
 		FileInputStream fis = null;
@@ -49,10 +48,6 @@ public class ulti {
 		}catch(IOException ex) {
 			System.out.println("Error: "+ex);
 		}
-		
-		
-		
-		
 	}
 	
 	
@@ -72,7 +67,6 @@ public class ulti {
 			history.add(buffer);
 		}
 		scanner.close();
-		
 		
 		return history;
 	}
@@ -94,9 +88,6 @@ public class ulti {
 		}catch(IOException ex) {
 			System.out.println("Error: "+ex);
 		}
-		
-		
-		
 	}
 	
 	//find key by value
@@ -106,7 +97,6 @@ public class ulti {
 			if (entry.getValue().toLowerCase().contains(value.toLowerCase())) {
 				setKey.add(entry.getKey());
 			}
-
 		}
 
 		return setKey;
@@ -124,7 +114,6 @@ public class ulti {
 
 			return result;
 		}
-		
 		return new String[0];
 	}
 	
@@ -171,8 +160,7 @@ public class ulti {
 					System.out.println("Error data input!!. Exit feature add slang!!!");
 				break;
 			}
-			
-			//sc.close();
+			sc.close();
 		}
 
 	}
@@ -219,8 +207,7 @@ public class ulti {
 				System.out.println("Exit method edit slang!!!");
 				break;
 		}
-		
-		//sc.close();
+		sc.close();
 	}
 	
 	//delete Slang
@@ -258,14 +245,12 @@ public class ulti {
 		else {
 			System.out.println("The slang no exist in data!!!");
 		}
-		
-		//sc.close();
+		sc.close();
 	}
 	
 	
 	//Reset Data
 	public static void resetData(HashMap<String, String> data) {
-		
 		String fileNameOriginal = "./src/data/Slag_Original.txt";
 		
 		data = ulti.ReadFileData(fileNameOriginal);
@@ -282,7 +267,6 @@ public class ulti {
 		//System.out.println("On day slang word: " + arrayKey[ranNum] + ": "+ data.get(arrayKey[ranNum]));
 		
 		return arrayKey[ranNum];
-		
 	}
 	
 	public static boolean checkExistInArray(String[] arr, String value) {
@@ -292,30 +276,22 @@ public class ulti {
 			if(arr[i].equals(value))
 				result =true;
 		}
-		
 		return result;
-		
 	}
 	
 	public static void questionFunny_ChooseDef(HashMap<String, String> data) {
 		String ranSlang = ulti.randomSlang(data);
-		
 		String [] result = ulti.findDefinition(data, ranSlang);
-		
 		Random rand = new Random();
-		
 		String rand_result = result[rand.nextInt(result.length)];
-		
 		String [] wrongResult = new String[3];
 		String [] wrongSlang = {"","",""};
 		
 		//bind wrongResult
 		for(int i =0; i<3; i++){
 			String slangWrong = "";
-			
 			do {
 				slangWrong = ulti.randomSlang(data);
-				
 			}//Check duplicate slang def
 			while(!slangWrong.equals(ranSlang)&& checkExistInArray(wrongSlang,slangWrong));
 			
@@ -353,32 +329,25 @@ public class ulti {
 		else {
 			System.out.println("You are wrong!!! The answer: "+ choosen[result_number]);
 		}
-		//sc.close();
+		sc.close();
 	}
 	
 	public static void questionFunny_ChooseSlang(HashMap<String, String> data) {
 		String ranSlang = ulti.randomSlang(data);
-		
 		String [] result = ulti.findDefinition(data, ranSlang);
-		
 		Random rand = new Random();
-		
 		String rand_result = result[rand.nextInt(result.length)];
-		
 		String [] wrongSlang = {"","",""};
 		
 		//bind wrongResult
 		for(int i =0; i<3; i++){
 			String slangWrong = "";
-			
 			do {
 				slangWrong = ulti.randomSlang(data);
-				
 			}//Check duplicate slang def
 			while(!slangWrong.equals(ranSlang)&& checkExistInArray(wrongSlang,slangWrong));
 			
 			wrongSlang[i] = slangWrong;
-			
 		}
 		
 		int result_number = rand.nextInt(4);
@@ -408,9 +377,7 @@ public class ulti {
 		else {
 			System.out.println("You are wrong!!! The answer: "+ choosen[result_number]);
 		}
-		
-		
-		//sc.close();
+		sc.close();
 	}
 	 
 	public static boolean exit(String nameFeature) {
@@ -422,7 +389,6 @@ public class ulti {
 		choose = choose.toLowerCase();
 		if(choose.equals("y")) {
 			result = true;
-
 		}
 		else {
 			if(choose.equals("n")) {
@@ -434,8 +400,6 @@ public class ulti {
 			}
 		
 		}
-		
 		return result;
 	}
-
 }
