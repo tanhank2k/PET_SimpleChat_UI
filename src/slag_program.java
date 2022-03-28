@@ -5,13 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-
 public class slag_program {
 	public static void main(String[] arg) {
 		String fileName = "./src/data/Slag.txt";
 		HashMap<String, String> data = ulti.ReadFileData(fileName);
 		List<String> history = ulti.readHistory("./src/history/history.txt");
-		
 		
 		boolean condition = true;
 		
@@ -31,7 +29,6 @@ public class slag_program {
 			System.out.println("9. Funny Question: Show a random Slang-word, choose right the definition match Slang-word.");
 			System.out.println("10. Funny Question: Show a random Definition, choose right the slang-word match Slang-word.");
 			System.out.println("11. Exit the program!!");	
-		
 			System.out.println("Choose the feature: Enter 1 to 10!");
 			System.out.println("Your choice: ");
 		
